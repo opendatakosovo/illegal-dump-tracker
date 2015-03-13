@@ -12,10 +12,6 @@
 
       <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
-    <!-- Bootstrap date-picker plug-in -->
-    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap-datepicker/css/datepicker.css') }}">
-
     <!-- Bootstrap Core CSS -->
     <link href="{{ url_for('static', filename='startbootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -92,17 +88,10 @@
                     </li>
                 </ul>
 
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Map</a></li>
                     <li><a href="#">About</a></li>
                 </ul>
-                {#
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Users</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-                #}
 
             </div>
             <!-- /.navbar-collapse -->

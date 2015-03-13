@@ -1,6 +1,89 @@
 {% extends "layout.html" %}
 {% block body %}
-<section>
-	<h3>Here be map</h3>
-</section>
+<!-- leaflets CSS -->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+<!-- leaflets JS -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<script>
+
+  var map = undefined;
+
+  var layerGroups = {
+  	'merc-kalt-03-802-am': {
+  		'layergroup': undefined,
+  		'color': 'green'
+  	},
+  	'merc-cist-03631bc': {
+  		'layergroup': undefined,
+  		'color': 'red'
+  	}
+  };
+
+  var routeCoordinates = [];
+
+  $(document).ready(function(){
+    map = L.map('map').setView([42.380491, 20.427397], 13);
+
+    L.tileLayer('http://{s}.tiles.mapbox.com/v3/georges.jjc3k7b1/{z}/{x}/{y}.png', {
+        attribution: 'Data Source: <a href="http://opendatakosovo.org">Open Data Kosovo</a>',
+        maxZoom: 20
+    }).addTo(map);
+
+    $('.route-checkbox').click(function() {
+    	toggleTruckRoute(this.value, this.checked);
+	});
+
+  });
+
+  function toggleTruckRoute(route_slug, display){
+    // Reset marker array
+    routeCoordinates = [];
+
+    if(display == false && layerGroups[route_slug]['layergroup'] != undefined){
+        map.removeLayer(layerGroups[route_slug]['layergroup']);
+    }else{
+    	$.get( "{{ url_for('api.route', route_slug='') }}" + route_slug, function( points ) {
+	      	$(points).each(function( idx, point ) {
+
+		        var pointLatLng = new L.LatLng(point.lat, point.lng);
+
+		        routeCoordinates.push(pointLatLng);
+			});
+
+			var routePolyline = new L.Polyline(routeCoordinates, {
+				color: layerGroups[route_slug]['color'],
+				weight: 3,
+				opacity: 0.5,
+				smoothFactor: 1
+			});
+
+			layerGroups[route_slug]['layergroup'] = routePolyline;
+	      	map.addLayer(layerGroups[route_slug]['layergroup']);
+
+			//routePolyline.addTo(map);
+    	});
+    }
+  }
+</script>
+
+<div id="map" style="height:600px">
+</div>
+
+<div align="center" style="padding-bottom:100px">
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="merc-kalt-03-802-am" class="route-checkbox">
+	    Merc.Kalt.03 802 AM
+	  </label>
+	</div>
+	<div class="checkbox">
+	  <label>
+	    <input type="checkbox" value="merc-cist-03631bc" class="route-checkbox">
+	    Merc.Cist.03631BC
+	  </label>
+	</div>
+</div>
+
 {% endblock %}

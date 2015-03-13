@@ -22,8 +22,10 @@ def create_app():
 
     #Import blueprint modules
     from app.mod_map.views import mod_map
+    from app.mod_api.views import mod_api
 
     app.register_blueprint(mod_map)
+    app.register_blueprint(mod_api)
 
     #Initialize the app to work with MongoDB
     mongo.init_app(app, config_prefix='MONGO')
