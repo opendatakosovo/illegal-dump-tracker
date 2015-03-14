@@ -5,9 +5,6 @@ from bson import json_util
 
 from app import mongo
 
-import requests
-import json
-
 mod_api = Blueprint('api', __name__, url_prefix = '/api')
 
 @mod_api.route('/routes/<route_slug>', methods=['GET'])
