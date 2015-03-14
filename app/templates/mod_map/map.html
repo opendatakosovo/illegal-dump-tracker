@@ -2,10 +2,11 @@
 {% block body %}
 <!-- leaflets CSS -->
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='leaflet.fullscreen-1.1.4/Control.FullScreen.css') }}" />
 
 <!-- leaflets JS -->
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-
+<script src="{{ url_for('static', filename='leaflet.fullscreen-1.1.4/Control.FullScreen.js') }}"></script>
 <script src="{{ url_for('static', filename='leaflet-heat.js') }}"></script>
 
 <script src="{{ url_for('static', filename='dumps.js') }}"></script>
@@ -36,6 +37,14 @@
     L.tileLayer('http://{s}.tiles.mapbox.com/v3/georges.jjc3k7b1/{z}/{x}/{y}.png', {
         attribution: 'Data Source: <a href="http://opendatakosovo.org">Open Data Kosovo</a>',
         maxZoom: 20
+    }).addTo(map);
+
+    // create a fullscreen button and add it to the map
+    L.control.fullscreen({
+      position: 'topleft', // change the position of the button can be topleft, topright, bottomright or bottomleft, defaut topleft
+      title: 'Full Screen', // change the title of the button, default Full Screen
+      forceSeparateButton: true, // force seperate button to detach from zoom buttons, default false
+      forcePseudoFullscreen: true // force use of pseudo full screen even if full screen API is available, default false
     }).addTo(map);
 
     toggleDumpHeatMap(true);
