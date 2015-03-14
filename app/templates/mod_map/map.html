@@ -6,11 +6,17 @@
 <!-- leaflets JS -->
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
-<script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
+<script src="{{ url_for('static', filename='leaflet-heat.js') }}"></script>
+
+<script src="{{ url_for('static', filename='dumps.js') }}"></script>
+
+
+<script>
   var map = undefined;
 
-  var layerGroups = {
+  var routeLayerGroups = {
   	'merc-kalt-03-802-am': {
   		'layergroup': undefined,
   		'color': 'green'
@@ -21,28 +27,118 @@
   	}
   };
 
-  var routeCoordinates = [];
+  var dumpMarkersLayerGroup = undefined;
+  var heatLayerGroup = undefined
+
 
   $(document).ready(function(){
-    map = L.map('map').setView([42.380491, 20.427397], 13);
+    
+    map = L.map('map').setView([42.384410, 20.428502], 14);
 
     L.tileLayer('http://{s}.tiles.mapbox.com/v3/georges.jjc3k7b1/{z}/{x}/{y}.png', {
         attribution: 'Data Source: <a href="http://opendatakosovo.org">Open Data Kosovo</a>',
         maxZoom: 20
     }).addTo(map);
 
+    toggleDumpHeatMap(true);
+
+    $('.dump-checkbox').click(function() {
+      if(this.value == "markers"){
+        toggleDumpMarkers(this.checked);
+
+      }else if(this.value == "heat"){
+        toggleDumpHeatMap(this.checked);
+      }
+    });
+    
+
     $('.route-checkbox').click(function() {
     	toggleTruckRoute(this.value, this.checked);
-	});
+	  });
 
   });
 
+  function toggleDumpMarkers(display){
+    var dumpMarkerArray = [];
+
+    if(display == false && dumpMarkersLayerGroup != undefined){
+        map.removeLayer(dumpMarkersLayerGroup);
+
+    }else{
+
+      var greenIcon = L.icon({
+          iconUrl: 'leaf-green.png',
+          shadowUrl: 'leaf-shadow.png',
+
+          iconSize:     [38, 95], // size of the icon
+          shadowSize:   [50, 64], // size of the shadow
+          iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+          shadowAnchor: [4, 62],  // the same for the shadow
+          popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+      })
+
+      $(dumps).each(function( idx, dump ) {
+
+        daysSinceReported = (new Date().getTime() - dump["trashTime"]["savedTime"]) / (1000*60*60*24);
+
+        // Only report trash reported x days from now
+        if(daysSinceReported < 100){
+          lat = dump["location"]["lat"];
+          lng = dump["location"]["lon"];
+
+          var marker = L.marker([lat, lng]);
+          dumpMarkerArray.push(marker);
+        }
+      });
+
+      dumpMarkersLayerGroup = L.layerGroup(dumpMarkerArray);
+      map.addLayer(dumpMarkersLayerGroup);
+    }
+  }
+
+  function toggleDumpHeatMap(display){
+    var heatPoints = [];
+
+    if(display == false && heatLayerGroup != undefined){
+        map.removeLayer(heatLayerGroup);
+    }else{
+
+      $(dumps).each(function( idx, dump ) {
+
+        daysSinceReported = (new Date().getTime() - dump["trashTime"]["savedTime"]) / (1000*60*60*24);
+
+        // Only report trash reported x days from now
+        if(daysSinceReported < 100){
+          lat = dump["location"]["lat"];
+          lng = dump["location"]["lon"];
+
+          var heatLatLng = new L.LatLng(lat, lng);
+          heatPoints.push(heatLatLng);
+        }
+      });
+
+      var options = {
+        'minOpacity': 0.1,
+        'max': 0.2,
+        'radius': 20,
+        'blur': 15
+      }
+
+      heatLayerGroup = L.heatLayer(heatPoints, options)
+      map.addLayer(heatLayerGroup);
+    }
+  }
+
+  function toggleTruckHeatMap(){
+    //TODO:
+  }
+
   function toggleTruckRoute(route_slug, display){
     // Reset marker array
-    routeCoordinates = [];
+    var routeCoordinates = [];
 
-    if(display == false && layerGroups[route_slug]['layergroup'] != undefined){
-        map.removeLayer(layerGroups[route_slug]['layergroup']);
+    if(display == false && routeLayerGroups[route_slug]['layergroup'] != undefined){
+        map.removeLayer(routeLayerGroups[route_slug]['layergroup']);
     }else{
     	$.get( "{{ url_for('api.route', route_slug='') }}" + route_slug, function( points ) {
 	      	$(points).each(function( idx, point ) {
@@ -53,16 +149,15 @@
 			});
 
 			var routePolyline = new L.Polyline(routeCoordinates, {
-				color: layerGroups[route_slug]['color'],
+				color: routeLayerGroups[route_slug]['color'],
 				weight: 3,
 				opacity: 0.5,
 				smoothFactor: 1
 			});
 
-			layerGroups[route_slug]['layergroup'] = routePolyline;
-	      	map.addLayer(layerGroups[route_slug]['layergroup']);
+			routeLayerGroups[route_slug]['layergroup'] = routePolyline;
+	    map.addLayer(routeLayerGroups[route_slug]['layergroup']);
 
-			//routePolyline.addTo(map);
     	});
     }
   }
@@ -70,20 +165,44 @@
 
 <div id="map" style="height:600px">
 </div>
-
 <div align="center" style="padding-bottom:100px">
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="merc-kalt-03-802-am" class="route-checkbox">
-	    Merc.Kalt.03 802 AM
-	  </label>
-	</div>
-	<div class="checkbox">
-	  <label>
-	    <input type="checkbox" value="merc-cist-03631bc" class="route-checkbox">
-	    Merc.Cist.03631BC
-	  </label>
-	</div>
+  <table>
+    <tr>
+      <td style="padding-right:10px;">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="heat" class="dump-checkbox" checked>
+              Dump Heatmap
+            </input>
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="markers" class="dump-checkbox">
+              Dump Markers
+            </input>
+          </label>
+        </div>
+      </td>
+      <td style="padding-left:10px;"> 
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="merc-kalt-03-802-am" class="route-checkbox">
+              Merc.Kalt.03 802 AM
+            </input>
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="merc-cist-03631bc" class="route-checkbox">
+              Merc.Cist.03631BC
+            </input>
+          </label>
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>
+
 
 {% endblock %}

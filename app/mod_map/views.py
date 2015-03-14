@@ -11,3 +11,5 @@ def map():
     Show map
     '''
     return render_template('mod_map/map.html')
+
+
