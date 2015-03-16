@@ -8,8 +8,24 @@ mod_map = Blueprint('map', __name__)
 @mod_map.route('/', methods=['GET'])
 def map():
     '''
-    Show map
+    Show map page.
     '''
     return render_template('mod_map/map.html')
+
+@mod_map.route('/about', methods=['GET'])
+def about():
+    '''
+    Show about page.
+    '''
+    return render_template('mod_map/about.html')
+
+
+@mod_map.route('/testimonials', methods=['GET'])
+def testimonials():
+    '''
+    Show testimonials page.
+    '''
+    return render_template('mod_map/testimonials.html')
+
 
 
