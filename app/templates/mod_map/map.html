@@ -16,18 +16,65 @@
   var map = undefined;
 
   var routeLayerGroups = {
-  	'merc-kalt-03-802-am': {
-  		'layergroup': undefined,
-  		'color': 'green'
-  	},
-  	'merc-cist-03631bc': {
-  		'layergroup': undefined,
-  		'color': 'red'
-  	}
+    'ford-03-462-ck': {
+      'layergroup': undefined,
+      'color': 'green'
+    },
+    'hunday-ku-03724dp': {
+      'layergroup': undefined,
+      'color': 'red'
+    },
+    'hunday-qe-03679dp': {
+      'layergroup': undefined,
+      'color': 'blue'
+    },
+    'hunday-shp-03682dp': {
+      'layergroup': undefined,
+      'color': 'yellow'
+    },
+    'hyundai-m-thaqi': {
+      'layergroup': undefined,
+      'color': 'magenta'
+    },
+    'iveco-03804am': {
+      'layergroup': undefined,
+      'color': 'black'
+    },
+    'iveco-a-shala': {
+      'layergroup': undefined,
+      'color': 'brown'
+    },
+    'iveco': {
+      'layergroup': undefined,
+      'color': 'grey'
+    },
+    'man-kalter-03817ce': {
+      'layergroup': undefined,
+      'color': 'tomato'
+    },
+    'merc-fek-03584cl': {
+      'layergroup': undefined,
+      'color': 'thistle'
+    },
+    'merc-kalt-03-802-am': {
+      'layergroup': undefined,
+      'color': 'turquoise'
+    },
+    'merc-kombi-03849ae': {
+      'layergroup': undefined,
+      'color': 'wheat'
+    },
+    'merc-port-03801am': {
+      'layergroup': undefined,
+      'color': 'plum'
+    },
+
   };
 
   var dumpMarkersLayerGroup = undefined;
-  var heatLayerGroup = undefined
+  var heatLayerGroup = undefined;
+
+
 
 
   $(document).ready(function(){
@@ -62,6 +109,8 @@
     $('.route-checkbox').click(function() {
     	toggleTruckRoute(this.value, this.checked);
 	  });
+
+    var controlLayers = L.control.layers(routeLayerGroups).addTo(map);
 
   });
 
@@ -121,13 +170,17 @@
         'blur': 15
       }
 
+      var 
+
       heatLayerGroup = L.heatLayer(heatPoints, options)
       map.addLayer(heatLayerGroup);
     }
   }
 
   function toggleTruckHeatMap(){
-    //TODO:
+
+      
+
   }
 
   function toggleTruckRoute(route_slug, display){
@@ -143,27 +196,34 @@
 		        var pointLatLng = new L.LatLng(point.lat, point.lng);
 
 		        routeCoordinates.push(pointLatLng);
-			});
+			    });
 
-			var routePolyline = new L.Polyline(routeCoordinates, {
-				color: routeLayerGroups[route_slug]['color'],
-				weight: 3,
-				opacity: 0.5,
-				smoothFactor: 1
-			});
+    			var routePolyline = new L.Polyline(routeCoordinates, {
+    				color: routeLayerGroups[route_slug]['color'],
+    				weight: 3,
+    				opacity: 0.5,
+    				smoothFactor: 1
+    			});
 
-			routeLayerGroups[route_slug]['layergroup'] = routePolyline;
-	    map.addLayer(routeLayerGroups[route_slug]['layergroup']);
-
+    			routeLayerGroups[route_slug]['layergroup'] = routePolyline;
+    	    map.addLayer(routeLayerGroups[route_slug]['layergroup']);
     	});
+
+      routeLayerGroups[route_slug]['layergroup'] = routePolyline;
+      map.addLayer(routeLayerGroups[route_slug]['layergroup']);
+      
     }
   }
+
+
+
 </script>
 
 <div style="padding-top:100px;">
   <div id="map" style="height:600px;">
   </div>
 </div>
+
 
 <div align="center" style="padding-bottom:100px">
   <table>
@@ -187,15 +247,103 @@
       <td style="padding-left:10px;"> 
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="merc-kalt-03-802-am" class="route-checkbox">
-              Merc.Kalt.03 802 AM
+            <input type="checkbox" value="ford-03-462-ck" class="route-checkbox">
+              ford-03-462-ck
             </input>
           </label>
         </div>
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="merc-cist-03631bc" class="route-checkbox">
-              Merc.Cist.03631BC
+            <input type="checkbox" value="hunday-ku-03724dp" class="route-checkbox">
+              hunday-ku-03724dp
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="hunday-qe-03679dp" class="route-checkbox">
+              hunday-qe-03679dp
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="hunday-shp-03682dp" class="route-checkbox">
+              hunday-shp-03682dp
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="hyundai-m-thaqi" class="route-checkbox">
+              hyundai-m-thaqi
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="iveco-03804am" class="route-checkbox">
+              iveco-03804am
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="iveco-a-shala" class="route-checkbox">
+              iveco-a-shala
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="iveco" class="route-checkbox">
+              iveco
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="man-kalter-03817ce" class="route-checkbox">
+              man-kalter-03817ce
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="merc-fek-03584cl" class="route-checkbox">
+              merc-fek-03584cl
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="merc-kalt-03-802-am" class="route-checkbox">
+              merc-kalt-03-802-am
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="merc-kombi-03849ae" class="route-checkbox">
+              merc-kombi-03849ae
+            </input>
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="merc-port-03801am" class="route-checkbox">
+              merc-port-03801am
             </input>
           </label>
         </div>
