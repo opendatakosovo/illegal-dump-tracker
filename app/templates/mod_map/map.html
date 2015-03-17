@@ -18,55 +18,68 @@
   var routeLayerGroups = {
     'ford-03-462-ck': {
       'layergroup': undefined,
-      'color': 'green'
+      'color': 'green',
+      'cached': false
     },
     'hunday-ku-03724dp': {
       'layergroup': undefined,
-      'color': 'red'
+      'color': 'red',
+      'cached': false
     },
     'hunday-qe-03679dp': {
       'layergroup': undefined,
-      'color': 'blue'
+      'color': 'blue',
+      'cached': false
     },
     'hunday-shp-03682dp': {
       'layergroup': undefined,
-      'color': 'yellow'
+      'color': 'yellow',
+      'cached': false
     },
     'hyundai-m-thaqi': {
       'layergroup': undefined,
-      'color': 'magenta'
+      'color': 'magenta',
+      'cached': false
     },
     'iveco-03804am': {
       'layergroup': undefined,
-      'color': 'black'
+      'color': 'black',
+      'cached': false
     },
     'iveco-a-shala': {
       'layergroup': undefined,
-      'color': 'brown'
+      'color': 'brown',
+      'cached': false
     },
     'iveco': {
       'layergroup': undefined,
-      'color': 'grey'
+      'color': 'grey',
+      'cached': false
     },
     'man-kalter-03817ce': {
       'layergroup': undefined,
-      'color': 'tomato'
+      'color': 'tomato',
+      'cached': false
     },
     'merc-fek-03584cl': {
       'layergroup': undefined,
-      'color': 'thistle'
+      'color': 'thistle',
+      'cached': false
     },
     'merc-kalt-03-802-am': {
       'layergroup': undefined,
-      'color': 'turquoise'
+      'color': 'turquoise',
+      'cached': false
     },
     'merc-kombi-03849ae': {
       'layergroup': undefined,
-      'color': 'wheat'
+      'color': 'wheat',
+      'cached': false
     },
     'merc-port-03801am': {
       'layergroup': undefined,
-      'color': 'plum'
+      'color': 'plum',
+      'cached': false
     },
 
   };
@@ -177,36 +190,57 @@
 
   function toggleTruckHeatMap(){
 
-      
-
   }
 
   function toggleTruckRoute(route_slug, display){
-    // Reset marker array
-    var routeCoordinates = [];
 
     if(display == false && routeLayerGroups[route_slug]['layergroup'] != undefined){
         map.removeLayer(routeLayerGroups[route_slug]['layergroup']);
     }else{
-    	$.get( "{{ url_for('api.route', route_slug='') }}" + route_slug, function( points ) {
-	      	$(points).each(function( idx, point ) {
 
-		        var pointLatLng = new L.LatLng(point.lat, point.lng);
+      // This request for route coordinates hasn't been done before, do it now.
+      if(routeLayerGroups[route_slug]['cached'] == false){
 
-		        routeCoordinates.push(pointLatLng);
-			    });
+      	$.get(Flask.url_for('api.route', {route_slug: route_slug}), function( points ) {
 
-    			var routePolyline = new L.Polyline(routeCoordinates, {
-    				color: routeLayerGroups[route_slug]['color'],
-    				weight: 3,
-    				opacity: 0.5,
-    				smoothFactor: 1
-    			});
+          // Save coordinates for future call.
+          // This is so that we don't have to make a request to the server every time.
+          // A form of client-side javascript caching.
+          // (Maybe it would be better to just "hide" the layer after it is built instead of removing it?)
+          routeLayerGroups[route_slug]['data'] = points;
+          routeLayerGroups[route_slug]['cached'] = true;
 
-    			routeLayerGroups[route_slug]['layergroup'] = routePolyline;
-    	    map.addLayer(routeLayerGroups[route_slug]['layergroup']);
-    	});
+          // Build the route layer.
+  	      buildTruckRoutePolylineLayer(route_slug, points);
+      			
+      	});
+
+      } else{ // This request for route coordinates has been done before, retrieve it from client-side javascript cache
+        var points = routeLayerGroups[route_slug]['data']; // It's in our route JSON object
+
+        // Build the route layer.
+        buildTruckRoutePolylineLayer(route_slug, points);
+      }
     }
+  }
+
+  function buildTruckRoutePolylineLayer(route_slug, points){
+    var routeCoordinates = [];
+
+    $(points).each(function( idx, point ) {
+      var pointLatLng = new L.LatLng(point.lat, point.lng);
+      routeCoordinates.push(pointLatLng);
+    });
+
+    var routePolyline = new L.Polyline(routeCoordinates, {
+      color: routeLayerGroups[route_slug]['color'],
+      weight: 3,
+      opacity: 0.5,
+      smoothFactor: 1
+    });
+
+    routeLayerGroups[route_slug]['layergroup'] = routePolyline;
+    map.addLayer(routeLayerGroups[route_slug]['layergroup']);
   }
 
 
