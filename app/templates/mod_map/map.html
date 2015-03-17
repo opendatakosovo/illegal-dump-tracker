@@ -201,7 +201,7 @@
       // This request for route coordinates hasn't been done before, do it now.
       if(routeLayerGroups[route_slug]['cached'] == false){
 
-      	$.get(Flask.url_for('api.route', {route_slug: route_slug}), function( points ) {
+      	$.get( "{{ url_for('api.route', route_slug='') }}" + route_slug, function( points ) {
 
           // Save coordinates for future call.
           // This is so that we don't have to make a request to the server every time.

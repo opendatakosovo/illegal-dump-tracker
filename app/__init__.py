@@ -4,20 +4,15 @@ import ConfigParser
 from flask.ext.pymongo import PyMongo
 from logging.handlers import RotatingFileHandler
 from utils.utils import Utils
-from flask_jsglue import JSGlue
 
 # Create MongoDB database object.
 mongo = PyMongo()
 utils = Utils()
-jsglue = JSGlue()
 
 def create_app():
 
     #Here we  create flask app
     app = Flask(__name__)
-
-    # Initialise JSGlue, so we can call url_for from Jinja2 template.
-    jsglue.init_app(app)
 
     #We load configurations
     load_config(app)
