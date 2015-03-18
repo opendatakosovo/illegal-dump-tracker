@@ -5,6 +5,7 @@
 
 .cbp-spmenu-title{
   cursor: w-resize;
+  background: #258ecd;
 }
 
 .showLeft-collapsed{
@@ -36,10 +37,6 @@
   color: #fff;
   font-size: 1.1em;
   font-weight: 300;
-}
-
-.cbp-spmenu-title{
-  background: #258ecd;
 }
 
 .cbp-spmenu li:hover {
