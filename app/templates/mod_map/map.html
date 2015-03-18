@@ -3,11 +3,13 @@
 <!-- leaflets CSS -->
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <link rel="stylesheet" href="{{ url_for('static', filename='leaflet.fullscreen-1.1.4/Control.FullScreen.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='map-controls/map-controls.css') }}" />
 
 <!-- leaflets JS -->
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 <script src="{{ url_for('static', filename='leaflet.fullscreen-1.1.4/Control.FullScreen.js') }}"></script>
 <script src="{{ url_for('static', filename='leaflet-heat.js') }}"></script>
+<script src="{{ url_for('static', filename='map-controls/map-controls.js') }}"></script>
 
 <script src="{{ url_for('static', filename='dumps.js') }}"></script>
 
@@ -17,67 +19,106 @@
 
   var routeLayerGroups = {
     'ford-03-462-ck': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'green',
       'cached': false
     },
     'hunday-ku-03724dp': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'red',
       'cached': false
     },
     'hunday-qe-03679dp': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'blue',
       'cached': false
     },
     'hunday-shp-03682dp': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'yellow',
       'cached': false
     },
     'hyundai-m-thaqi': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'magenta',
       'cached': false
     },
     'iveco-03804am': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'black',
       'cached': false
     },
     'iveco-a-shala': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'brown',
       'cached': false
     },
     'iveco': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'grey',
       'cached': false
     },
     'man-kalter-03817ce': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'tomato',
       'cached': false
     },
     'merc-fek-03584cl': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'thistle',
       'cached': false
     },
     'merc-kalt-03-802-am': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'turquoise',
       'cached': false
     },
     'merc-kombi-03849ae': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'wheat',
       'cached': false
     },
     'merc-port-03801am': {
-      'layergroup': undefined,
+      'layergroup': {
+        'route': undefined,
+        'heat': undefined
+      },
       'color': 'plum',
       'cached': false
     },
@@ -87,21 +128,19 @@
   var dumpMarkersLayerGroup = undefined;
   var heatLayerGroup = undefined;
 
-
-
-
   $(document).ready(function(){
-    
-    map = L.map('map').setView([42.381790, 20.428734], 15);
+    map = L.map('map', {zoomControl: false}).setView([42.381790, 20.428734], 15);
 
     L.tileLayer('http://{s}.tiles.mapbox.com/v3/georges.jjc3k7b1/{z}/{x}/{y}.png', {
         attribution: 'Data Source: <a href="http://opendatakosovo.org">Open Data Kosovo</a>',
         maxZoom: 20
     }).addTo(map);
 
+    new L.Control.Zoom({ position: 'topright' }).addTo(map);
+
     // create a fullscreen button and add it to the map
     L.control.fullscreen({
-      position: 'topleft', // change the position of the button can be topleft, topright, bottomright or bottomleft, defaut topleft
+      position: 'topright', // change the position of the button can be topleft, topright, bottomright or bottomleft, defaut topleft
       title: 'Full screen', // change the title of the button, default Full Screen
       forceSeparateButton: true, // force seperate button to detach from zoom buttons, default false
       forcePseudoFullscreen: true // force use of pseudo full screen even if full screen API is available, default false
@@ -118,12 +157,13 @@
       }
     });
     
-
     $('.route-checkbox').click(function() {
-    	toggleTruckRoute(this.value, this.checked);
+    	toggleTruckRoute(this.value, this.checked, 'route');
 	  });
 
-    var controlLayers = L.control.layers(routeLayerGroups).addTo(map);
+    $('.route-heat-checkbox').click(function() {
+      toggleTruckRoute(this.value, this.checked, 'heat');
+    });
 
   });
 
@@ -188,43 +228,61 @@
     }
   }
 
-  function toggleTruckHeatMap(){
+  function toggleTruckRoute(routeSlug, display, mapType){
 
-  }
-
-  function toggleTruckRoute(route_slug, display){
-
-    if(display == false && routeLayerGroups[route_slug]['layergroup'] != undefined){
-        map.removeLayer(routeLayerGroups[route_slug]['layergroup']);
+    if(display == false && routeLayerGroups[routeSlug]['layergroup'][mapType] != undefined){
+        map.removeLayer(routeLayerGroups[routeSlug]['layergroup'][mapType]);
     }else{
 
       // This request for route coordinates hasn't been done before, do it now.
-      if(routeLayerGroups[route_slug]['cached'] == false){
+      if(routeLayerGroups[routeSlug]['cached'] == false){
+        // Get route data points, build layer, and display it.
+        getAndDisplayTruckRouteData(routeSlug, mapType);
 
-      	$.get( "{{ url_for('api.route', route_slug='') }}" + route_slug, function( points ) {
+      }
+      // We have the points/data, it was retrieved when building either the route polyline or route heatmap layer.
+      // But now, we are builing the layer we didn't build before, so we still have to build a layer.
+      // e.g. First request was for polyline route for truck, got the data and built that layer.
+      //      But now the second request is for the heat route for the same truck, got the data but didn't build that layer yet.
+      else if(routeLayerGroups[routeSlug]['layergroup'][mapType] == undefined){
+        if(mapType == 'route'){
+          buildTruckRoutePolylineLayer(routeSlug, routeLayerGroups[routeSlug]['data']);
+        }else if(mapType == 'heat'){
+          buildTruckRouteHeatLayer(routeSlug, routeLayerGroups[routeSlug]['data']);
+        }
+      }else{
+        // This request for route coordinates has been done before.
+        // This means that this route layer has already been built.
+        // Retrieve the layer from client-side javascript cache
+        map.addLayer(routeLayerGroups[routeSlug]['layergroup'][mapType]);
+      }
+    }
+  }
+
+  function getAndDisplayTruckRouteData(routeSlug, mapType){
+    $.get( "{{ url_for('api.route', route_slug='') }}" + routeSlug, function( points ) {
 
           // Save coordinates for future call.
           // This is so that we don't have to make a request to the server every time.
           // A form of client-side javascript caching.
           // (Maybe it would be better to just "hide" the layer after it is built instead of removing it?)
-          routeLayerGroups[route_slug]['data'] = points;
-          routeLayerGroups[route_slug]['cached'] = true;
+          routeLayerGroups[routeSlug]['data'] = points;
+          routeLayerGroups[routeSlug]['cached'] = true;
 
-          // Build the route layer.
-  	      buildTruckRoutePolylineLayer(route_slug, points);
-      			
-      	});
-
-      } else{ // This request for route coordinates has been done before, retrieve it from client-side javascript cache
-        var points = routeLayerGroups[route_slug]['data']; // It's in our route JSON object
-
+    }).done(function() {
         // Build the route layer.
-        buildTruckRoutePolylineLayer(route_slug, points);
-      }
-    }
+        if(mapType == 'route'){
+          buildTruckRoutePolylineLayer(routeSlug, routeLayerGroups[routeSlug]['data']);
+        }else if(mapType == 'heat'){
+          buildTruckRouteHeatLayer(routeSlug, routeLayerGroups[routeSlug]['data']);
+        }
+        
+    });
   }
 
   function buildTruckRoutePolylineLayer(route_slug, points){
+
+    // Build route polyline layer
     var routeCoordinates = [];
 
     $(points).each(function( idx, point ) {
@@ -239,59 +297,114 @@
       smoothFactor: 1
     });
 
-    routeLayerGroups[route_slug]['layergroup'] = routePolyline;
-    map.addLayer(routeLayerGroups[route_slug]['layergroup']);
+    routeLayerGroups[route_slug]['layergroup']['route'] = routePolyline;
+    map.addLayer(routeLayerGroups[route_slug]['layergroup']['route']);
+  }
+
+  function buildTruckRouteHeatLayer(route_slug, points){
+
+    // Build route heat map layer
+    var routeCoordinates = [];
+
+    $(points).each(function( idx, point ) {
+      var pointLatLng = new L.LatLng(point.lat, point.lng);
+      routeCoordinates.push(pointLatLng);
+    });
+
+    var options = {
+      'minOpacity': 0.1,
+      'max': 0.2,
+      'radius': 10,
+      'blur': 15,
+      'gradient': {0.29: 'blue', 0: 'purple', 0.9: 'green'}
+    }
+
+    routeLayerGroups[route_slug]['layergroup']['heat'] = L.heatLayer(routeCoordinates, options)
+    map.addLayer(routeLayerGroups[route_slug]['layergroup']['heat']);
   }
 
 
 
 </script>
 
+<!-- body has the class "cbp-spmenu-push" -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+  <ul>
+    <li id="showLeft">Map Controls
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    >></li>
+    <li id="showLeft">Dumps:</li>
+    <li>
+      <input type="checkbox" id="markers" name="cc" value="markers" class="dump-checkbox" />
+      <label for="markers"><span></span>Markers</label>
+      <br>
+      <input type="checkbox" id="heat" name="cc" value="heat" class="dump-checkbox" checked />
+      <label for="heat"><span></span>Heat Map</label>
+    </li>
+    <li>Ford 03-462 CK:</li>
+    <li>
+      <input type="checkbox" id="ford-03-462-ck-route" name="ford-03-462-ck" value="ford-03-462-ck" class="route-checkbox"/>
+      <label for="ford-03-462-ck-route"><span></span>Route</label>
+      <br>
+      <input type="checkbox" id="ford-03-462-ck-heat" name="cc" value="ford-03-462-ck" class="route-heat-checkbox" />
+      <label for="ford-03-462-ck-heat"><span></span>Heat Map</label>
+    </li>
+    <!-- FAULT ROUTE - REMOVED -->
+    <!--li>Hyundai KU 03-724 DP:</li>
+    <li>
+      <input type="checkbox" id="hunday-ku-03724dp-route" name="hunday-ku-03724dp" value="hunday-ku-03724dp" class="route-checkbox"/>
+      <label for="hunday-ku-03724dp-route"><span></span>Route</label>
+      <br>
+      <input type="checkbox" id="hunday-ku-03724dp-heat" name="cc" value="hunday-ku-03724dp" class="route-heat-checkbox" />
+      <label for="hunday-ku-03724dp-heat"><span></span>Heat Map</label>
+    </li-->
+    <li>Hyundai QE 03-679 DP:</li>
+    <li>
+      <input type="checkbox" id="hunday-qe-03679dp-route" name="hunday-qe-03679dp" value="hunday-qe-03679dp" class="route-checkbox"/>
+      <label for="hunday-qe-03679dp-route"><span></span>Route</label>
+      <br>
+      <input type="checkbox" id="hunday-qe-03679dp-heat" name="cc" value="hunday-qe-03679dp" class="route-heat-checkbox" />
+      <label for="hunday-qe-03679dp-heat"><span></span>Heat Map</label>
+    </li>
+    <li>Hyundai SHP 03-679 DP:</li>
+    <li>
+      <input type="checkbox" id="hunday-shp-03682dp-route" name="hunday-shp-03682dp" value="hunday-qe-03679dp" class="route-checkbox"/>
+      <label for="hunday-shp-03682dp-route"><span></span>Route</label>
+      <br>
+      <input type="checkbox" id="hunday-shp-03682dp-heat" name="cc" value="hunday-shp-03682dp" class="route-heat-checkbox" />
+      <label for="hunday-shp-03682dp-heat"><span></span>Heat Map</label>
+    </li>
+  </ul>
+</nav>
+
+<div class="map-container">
+  <div id="map" style="height:100%;">
+  </div>
+</div>
+
+
+
+
+
+{#
+
 <div style="padding-top:100px;">
   <div id="map" style="height:600px;">
   </div>
 </div>
 
-
 <div align="center" style="padding-bottom:100px">
   <table>
     <tr>
       <td style="padding-right:10px;">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="heat" class="dump-checkbox" checked>
-              Dump Heatmap
-            </input>
-          </label>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="markers" class="dump-checkbox">
-              Dump Markers
-            </input>
-          </label>
-        </div>
-      </td>
-      <td style="padding-left:10px;"> 
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="ford-03-462-ck" class="route-checkbox">
-              ford-03-462-ck
-            </input>
-          </label>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="hunday-ku-03724dp" class="route-checkbox">
-              hunday-ku-03724dp
-            </input>
-          </label>
-        </div>
+        
+
 
         <div class="checkbox">
           <label>
             <input type="checkbox" value="hunday-qe-03679dp" class="route-checkbox">
-              hunday-qe-03679dp
+              
             </input>
           </label>
         </div>
@@ -299,7 +412,7 @@
         <div class="checkbox">
           <label>
             <input type="checkbox" value="hunday-shp-03682dp" class="route-checkbox">
-              hunday-shp-03682dp
+              
             </input>
           </label>
         </div>
@@ -379,7 +492,7 @@
     </tr>
   </table>
 </div>
-
+#}
 
 
 {% endblock %}
