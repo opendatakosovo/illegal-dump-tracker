@@ -4,9 +4,15 @@ $(document).ready(function(){
 
   classie.toggle( menuLeft, 'cbp-spmenu-open' );
 
-  showLeft.onclick = function() {
-    classie.toggle( this, 'active' );
+  $('#showLeft').click(function() {
     classie.toggle( menuLeft, 'cbp-spmenu-open' );
-  };
+    classie.toggle( showLeft, 'showLeft-collapsed' );
+
+    if(classie.has( showLeft, 'showLeft-collapsed' )){
+      $('#showLeft').html('&raquo');
+    }else{
+      $('#showLeft').html('&laquo');
+    }
+  });
 
 });

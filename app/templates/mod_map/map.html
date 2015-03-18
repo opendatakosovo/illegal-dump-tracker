@@ -266,8 +266,6 @@
 
     $.get( "{{ url_for('api.route', route_slug='') }}" + routeSlug, function( points ) {
 
-          
-
           // Save coordinates for future call.
           // This is so that we don't have to make a request to the server every time.
           // A form of client-side javascript caching.
@@ -366,10 +364,8 @@
 <!-- body has the class "cbp-spmenu-push" -->
 <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
   <ul>
-    <li id="showLeft"><b>Map Controls<b>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    >></li>
+    <li><b>Map Controls<b>
+    <span id="showLeft" class="showLeft">&laquo;<span></li>
     <li id="showLeft">Dumps:</li>
     <li>
       <input type="checkbox" id="markers" name="cc" value="markers" class="dump-checkbox" />

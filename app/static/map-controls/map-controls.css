@@ -1,4 +1,15 @@
 /* General styles for all menus */
+#showLeft{
+  padding-left:97px;
+}
+
+.showLeft{
+  cursor: w-resize;
+}
+
+.showLeft-collapsed{
+  cursor: e-resize;
+}
 
 .cbp-spmenu {
   background: #222;
