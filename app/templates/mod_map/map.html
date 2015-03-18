@@ -15,116 +15,39 @@
 
 <script src="{{ url_for('static', filename='dumps.js') }}"></script>
 
+{# All our routes: id, name, polyline colour, display #}
+{%
+  set routes = [
+    ['ford-03-462-ck','Ford 03-462 CK','green', True],
+    ['hunday-ku-03724dp','Hyundai 03-724 DP','yellow', False],
+    ['hunday-qe-03679dp','Hyundai 03-679 DP','red', True],
+    ['hunday-shp-03682dp','Hyundai 03-682 DP','blue', True],
+    ['hyundai-m-thaqi','Hyundai M. Thaqi','magenta', True],
+    ['iveco-03804am','Iveco 03-804 AM','black', True],
+    ['iveco-a-shala','Iveco A. Shala','brown', True],
+    ['iveco','Iveco','grey', True],
+    ['man-kalter-03817ce','Man Kalter 03-817 CE','tomato', True],
+    ['merc-fek-03584cl','Mercedes Fek 03-584 CL','thistle', True],
+    ['merc-kalt-03-802-am','Mercedes Kalt 03-802 AM','turquoise', True],
+    ['merc-kombi-03849ae','Mercedes Kombi 03-849 AE','wheat', True],
+    ['merc-port-03801am','Mercedes Port 03-801 AM','plum', True]
+  ]
+%}
 
 <script>
   var map = undefined;
 
   var routeLayerGroups = {
-    'ford-03-462-ck': {
+    {% for route in routes %}
+    '{{ route[0] }}': {
       'layergroup': {
         'route': undefined,
         'heat': undefined
       },
-      'color': 'green',
+      'color': '{{ route[2] }}',
       'cached': false
     },
-    'hunday-ku-03724dp': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'red',
-      'cached': false
-    },
-    'hunday-qe-03679dp': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'blue',
-      'cached': false
-    },
-    'hunday-shp-03682dp': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'yellow',
-      'cached': false
-    },
-    'hyundai-m-thaqi': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'magenta',
-      'cached': false
-    },
-    'iveco-03804am': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'black',
-      'cached': false
-    },
-    'iveco-a-shala': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'brown',
-      'cached': false
-    },
-    'iveco': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'grey',
-      'cached': false
-    },
-    'man-kalter-03817ce': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'tomato',
-      'cached': false
-    },
-    'merc-fek-03584cl': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'thistle',
-      'cached': false
-    },
-    'merc-kalt-03-802-am': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'turquoise',
-      'cached': false
-    },
-    'merc-kombi-03849ae': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'wheat',
-      'cached': false
-    },
-    'merc-port-03801am': {
-      'layergroup': {
-        'route': undefined,
-        'heat': undefined
-      },
-      'color': 'plum',
-      'cached': false
-    },
-
+    {% endfor %}
   };
 
   var dumpMarkersLayerGroup = undefined;
@@ -150,51 +73,43 @@
 
     toggleDumpHeatMap(true);
 
-    $('.dump-checkbox').click(function() {
-      if(this.value == "markers"){
-        toggleDumpMarkers(this.checked);
-
-      }else if(this.value == "heat"){
-        toggleDumpHeatMap(this.checked);
-      }
-    });
-    
-    $('.route-checkbox').click(function() {
-    	toggleTruckRoute(this.value, this.checked, 'route');
-	  });
-
-    $('.route-heat-checkbox').click(function() {
-      toggleTruckRoute(this.value, this.checked, 'heat');
-    });
 
   });
 
   function toggleDumpMarkers(display){
-    var dumpMarkerArray = [];
-
+    
     if(display == false && dumpMarkersLayerGroup != undefined){
         map.removeLayer(dumpMarkersLayerGroup);
 
+    }else if(dumpMarkersLayerGroup == undefined){
+        // First time building this layer, let's do it
+        var dumpMarkerArray = [];
+
+        $(dumps).each(function( idx, dump ) {
+
+          daysSinceReported = (new Date().getTime() - dump["trashTime"]["savedTime"]) / (1000*60*60*24);
+
+          // Only report trash reported x days from now
+          if(daysSinceReported < 100){
+
+            lat = dump["location"]["lat"];
+            lng = dump["location"]["lon"];
+
+            var marker = L.marker([lat, lng]);
+            dumpMarkerArray.push(marker);
+          }
+        });
+
+        dumpMarkersLayerGroup = L.layerGroup(dumpMarkerArray);
+        map.addLayer(dumpMarkersLayerGroup);
+
     }else{
-
-      $(dumps).each(function( idx, dump ) {
-
-        daysSinceReported = (new Date().getTime() - dump["trashTime"]["savedTime"]) / (1000*60*60*24);
-
-        // Only report trash reported x days from now
-        if(daysSinceReported < 100){
-
-          lat = dump["location"]["lat"];
-          lng = dump["location"]["lon"];
-
-          var marker = L.marker([lat, lng]);
-          dumpMarkerArray.push(marker);
-        }
-      });
-
-      dumpMarkersLayerGroup = L.layerGroup(dumpMarkerArray);
+      // Layer was already previously built, just re-add it.
       map.addLayer(dumpMarkersLayerGroup);
     }
+    
+
+    
   }
 
   function toggleDumpHeatMap(display){
@@ -335,22 +250,11 @@
         //win8_linear, ios, facebook, rotation, timer, pulse, 
         //progressBar, bouncePulse or img
         effect: 'img',
-
-        //place text under the effect (string).
-        text: '',
-
-        //background for container (string).
-        bg: 'rgba(255,255,255,0.7)',
-
-        //color for background animation and text (string).
-        color: '#000',
-
-        //change width for elem animation (string).
-        sizeW: '',
-
-        //change height for elem animation (string).
-        sizeH: '',
-
+        text: '', //place text under the effect (string).
+        bg: 'rgba(255,255,255,0.7)', //background for container (string).
+        color: '#000', //color for background animation and text (string).
+        sizeW: '', //change width for elem animation (string).
+        sizeH: '', //change height for elem animation (string).
         // url to image
         source: 'http://4206e9.medialib.glogster.com/media/0de16589e28c077f3ed220e39400774bac8f7465c318d7fe4cc8e9ce8756e1af/animated-gifs-eagles-6.gif'
       });
@@ -359,54 +263,39 @@
     }
   } 
 
+
+
 </script>
 
 <!-- body has the class "cbp-spmenu-push" -->
 <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
   <ul>
-    <li><b>Map Controls<b>
-    <span id="showLeft" class="showLeft">&laquo;<span></li>
-    <li id="showLeft">Dumps:</li>
-    <li>
+    <li id="menuTitle" class="cbp-spmenu-title"><b>Map Controls<b>
+      <span id="showLeft" class="showLeft">&laquo;<span>
+    </li>
+    <li class="cbp-spmenu-vertical-item-parent" id="dumps">Illegal Dumps</li>
+    <li class="cbp-spmenu-vertical-item-child" id="dumps">
       <input type="checkbox" id="markers" name="cc" value="markers" class="dump-checkbox" />
       <label for="markers"><span></span>Markers</label>
       <br>
       <input type="checkbox" id="heat" name="cc" value="heat" class="dump-checkbox" checked />
       <label for="heat"><span></span>Heat Map</label>
     </li>
-    <li>Ford 03-462 CK:</li>
-    <li>
-      <input type="checkbox" id="ford-03-462-ck-route" name="ford-03-462-ck" value="ford-03-462-ck" class="route-checkbox"/>
-      <label for="ford-03-462-ck-route"><span></span>Route</label>
-      <br>
-      <input type="checkbox" id="ford-03-462-ck-heat" name="cc" value="ford-03-462-ck" class="route-heat-checkbox" />
-      <label for="ford-03-462-ck-heat"><span></span>Heat Map</label>
-    </li>
-    <!-- FAULT ROUTE - REMOVED -->
-    <!--li>Hyundai KU 03-724 DP:</li>
-    <li>
-      <input type="checkbox" id="hunday-ku-03724dp-route" name="hunday-ku-03724dp" value="hunday-ku-03724dp" class="route-checkbox"/>
-      <label for="hunday-ku-03724dp-route"><span></span>Route</label>
-      <br>
-      <input type="checkbox" id="hunday-ku-03724dp-heat" name="cc" value="hunday-ku-03724dp" class="route-heat-checkbox" />
-      <label for="hunday-ku-03724dp-heat"><span></span>Heat Map</label>
-    </li-->
-    <li>Hyundai QE 03-679 DP:</li>
-    <li>
-      <input type="checkbox" id="hunday-qe-03679dp-route" name="hunday-qe-03679dp" value="hunday-qe-03679dp" class="route-checkbox"/>
-      <label for="hunday-qe-03679dp-route"><span></span>Route</label>
-      <br>
-      <input type="checkbox" id="hunday-qe-03679dp-heat" name="cc" value="hunday-qe-03679dp" class="route-heat-checkbox" />
-      <label for="hunday-qe-03679dp-heat"><span></span>Heat Map</label>
-    </li>
-    <li>Hyundai SHP 03-679 DP:</li>
-    <li>
-      <input type="checkbox" id="hunday-shp-03682dp-route" name="hunday-shp-03682dp" value="hunday-qe-03679dp" class="route-checkbox"/>
-      <label for="hunday-shp-03682dp-route"><span></span>Route</label>
-      <br>
-      <input type="checkbox" id="hunday-shp-03682dp-heat" name="cc" value="hunday-shp-03682dp" class="route-heat-checkbox" />
-      <label for="hunday-shp-03682dp-heat"><span></span>Heat Map</label>
-    </li>
+
+    {% for route in routes %}
+      {% if route[3] %}
+      <li class="cbp-spmenu-vertical-item-parent" id="{{ route[0] }}">
+        {{ route[1] }}
+      </li>
+      <li class="cbp-spmenu-vertical-item-child"  id="{{ route[0] }}" style="display:none;">
+        <input type="checkbox" id="{{ route[0] }}-route" name="{{ route[0] }}" value="{{ route[0] }}" class="route-checkbox"/>
+        <label for="{{ route[0] }}-route"><span></span>Route</label>
+        <br>
+        <input type="checkbox" id="{{ route[0] }}-heat" name="cc" value="{{ route[0] }}" class="route-heat-checkbox" />
+        <label for="{{ route[0] }}-heat"><span></span>Heat Map</label>
+      </li>
+      {% endif %}
+    {% endfor %}
   </ul>
 </nav>
 
@@ -414,117 +303,5 @@
   <div id="map" style="height:100%;">
   </div>
 </div>
-
-
-
-
-
-{#
-
-<div style="padding-top:100px;">
-  <div id="map" style="height:600px;">
-  </div>
-</div>
-
-<div align="center" style="padding-bottom:100px">
-  <table>
-    <tr>
-      <td style="padding-right:10px;">
-        
-
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="hunday-qe-03679dp" class="route-checkbox">
-              
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="hunday-shp-03682dp" class="route-checkbox">
-              
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="hyundai-m-thaqi" class="route-checkbox">
-              hyundai-m-thaqi
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="iveco-03804am" class="route-checkbox">
-              iveco-03804am
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="iveco-a-shala" class="route-checkbox">
-              iveco-a-shala
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="iveco" class="route-checkbox">
-              iveco
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="man-kalter-03817ce" class="route-checkbox">
-              man-kalter-03817ce
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="merc-fek-03584cl" class="route-checkbox">
-              merc-fek-03584cl
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="merc-kalt-03-802-am" class="route-checkbox">
-              merc-kalt-03-802-am
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="merc-kombi-03849ae" class="route-checkbox">
-              merc-kombi-03849ae
-            </input>
-          </label>
-        </div>
-
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="merc-port-03801am" class="route-checkbox">
-              merc-port-03801am
-            </input>
-          </label>
-        </div>
-      </td>
-    </tr>
-  </table>
-</div>
-#}
-
 
 {% endblock %}

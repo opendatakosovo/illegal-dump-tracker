@@ -1,9 +1,9 @@
 /* General styles for all menus */
 #showLeft{
-  padding-left:97px;
+  padding-left:110px;
 }
 
-.showLeft{
+.cbp-spmenu-title{
   cursor: w-resize;
 }
 
@@ -37,11 +37,15 @@
   font-size: 1.1em;
   font-weight: 300;
 }
-/*
-.cbp-spmenu a:hover {
+
+.cbp-spmenu-title{
   background: #258ecd;
 }
 
+.cbp-spmenu li:hover {
+  background: #258ecd;
+}
+/*
 .cbp-spmenu a:active {
   background: #afdefa;
   color: #47a3da;
@@ -58,14 +62,14 @@
 
 .cbp-spmenu-vertical li {
   border-bottom: 1px solid #258ecd;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 /* Vertical menu that slides from the left or right */
 
 .cbp-spmenu-left {
   padding-top:50px; /* Matching response design rule of the bootstrap theme. */
-  left: -200px; /* Let the menu sneak in a bit when it is collapsed so that we can clikc on it to bring it back. */
+  left: -210px; /* Let the menu sneak in a bit when it is collapsed so that we can clikc on it to bring it back. */
   /*left: -240px;*/
 }
 
@@ -89,7 +93,7 @@
 @media(min-width:768px) {
   .cbp-spmenu-left {
     /*left: -240px;*/
-    left: -200px; /* Let the menu sneak in a bit when it is collapsed so that we can clikc on it to bring it back. */
+    left: -210px; /* Let the menu sneak in a bit when it is collapsed so that we can clikc on it to bring it back. */
     padding-top:70px;  /* Matching response design rule of the bootstrap theme. */
   }
 
