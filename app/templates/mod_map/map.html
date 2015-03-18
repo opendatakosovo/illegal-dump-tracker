@@ -4,12 +4,14 @@
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <link rel="stylesheet" href="{{ url_for('static', filename='leaflet.fullscreen-1.1.4/Control.FullScreen.css') }}" />
 <link rel="stylesheet" href="{{ url_for('static', filename='map-controls/map-controls.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='waitMe/waitMe.css') }}" />
 
 <!-- leaflets JS -->
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 <script src="{{ url_for('static', filename='leaflet.fullscreen-1.1.4/Control.FullScreen.js') }}"></script>
 <script src="{{ url_for('static', filename='leaflet-heat.js') }}"></script>
 <script src="{{ url_for('static', filename='map-controls/map-controls.js') }}"></script>
+<script src="{{ url_for('static', filename='waitMe/waitMe.js') }}"></script>
 
 <script src="{{ url_for('static', filename='dumps.js') }}"></script>
 
@@ -260,7 +262,11 @@
   }
 
   function getAndDisplayTruckRouteData(routeSlug, mapType){
+    toggleSpinner(true);
+
     $.get( "{{ url_for('api.route', route_slug='') }}" + routeSlug, function( points ) {
+
+          
 
           // Save coordinates for future call.
           // This is so that we don't have to make a request to the server every time.
@@ -276,7 +282,8 @@
         }else if(mapType == 'heat'){
           buildTruckRouteHeatLayer(routeSlug, routeLayerGroups[routeSlug]['data']);
         }
-        
+
+        toggleSpinner(false);   
     });
   }
 
@@ -323,7 +330,36 @@
     map.addLayer(routeLayerGroups[route_slug]['layergroup']['heat']);
   }
 
+  function toggleSpinner(display){
+    if(display == true){
+      $('body').waitMe({
+        //none, rotateplane, stretch, orbit, roundBounce, win8, 
+        //win8_linear, ios, facebook, rotation, timer, pulse, 
+        //progressBar, bouncePulse or img
+        effect: 'img',
 
+        //place text under the effect (string).
+        text: '',
+
+        //background for container (string).
+        bg: 'rgba(255,255,255,0.7)',
+
+        //color for background animation and text (string).
+        color: '#000',
+
+        //change width for elem animation (string).
+        sizeW: '',
+
+        //change height for elem animation (string).
+        sizeH: '',
+
+        // url to image
+        source: 'http://4206e9.medialib.glogster.com/media/0de16589e28c077f3ed220e39400774bac8f7465c318d7fe4cc8e9ce8756e1af/animated-gifs-eagles-6.gif'
+      });
+    }else{
+      $('body').waitMe('hide');
+    }
+  } 
 
 </script>
 
