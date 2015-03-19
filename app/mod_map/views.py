@@ -12,6 +12,13 @@ def map():
     '''
     return render_template('mod_map/map.html')
 
+@mod_map.route('/statistics', methods=['GET'])
+def statistics():
+    '''
+    Show statistics page.
+    '''
+    return render_template('mod_map/statistics.html')
+
 @mod_map.route('/about', methods=['GET'])
 def about():
     '''
@@ -26,5 +33,3 @@ def testimonials():
     Show testimonials page.
     '''
     return render_template('mod_map/testimonials.html')
-
-
