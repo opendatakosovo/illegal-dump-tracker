@@ -97,6 +97,7 @@
 
             var marker = L.marker([lat, lng]);
             dumpMarkerArray.push(marker);
+          
           }
         });
 
@@ -263,8 +264,6 @@
     }
   } 
 
-
-
 </script>
 
 <!-- body has the class "cbp-spmenu-push" -->
@@ -280,6 +279,7 @@
       <br>
       <input type="checkbox" id="heat" name="cc" value="heat" class="dump-checkbox" checked />
       <label for="heat"><span></span>Heat Map</label>
+    </li>
     </li>
 
     {% for route in routes %}

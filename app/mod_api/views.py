@@ -3,7 +3,6 @@ from flask.views import View
 from flask import Response
 from bson import json_util
 from bson.son import SON
-
 from app import mongo
 
 mod_api = Blueprint('api', __name__, url_prefix = '/api')

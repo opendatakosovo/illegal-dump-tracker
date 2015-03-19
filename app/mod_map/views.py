@@ -28,4 +28,3 @@ def testimonials():
     return render_template('mod_map/testimonials.html')
 
 
-
