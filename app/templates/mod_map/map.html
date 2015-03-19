@@ -96,8 +96,11 @@
             lng = dump["location"]["lon"];
 
             var marker = L.marker([lat, lng]);
+            
+            htmlpic = "<a href ='"+dump['imgUrl']+"'"+" target='_blank'><img style = 'width: 100' src=" + dump['imgUrl'] + "> </a>"
+            marker.bindPopup(htmlpic)
             dumpMarkerArray.push(marker);
-          
+
           }
         });
 
