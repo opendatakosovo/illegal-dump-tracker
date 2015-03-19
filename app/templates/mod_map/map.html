@@ -82,6 +82,7 @@
         map.removeLayer(dumpMarkersLayerGroup);
 
     }else if(dumpMarkersLayerGroup == undefined){
+
         // First time building this layer, let's do it
         var dumpMarkerArray = [];
 
@@ -96,11 +97,12 @@
             lng = dump["location"]["lon"];
 
             var marker = L.marker([lat, lng]);
-            
-            htmlpic = "<a href ='"+dump['imgUrl']+"'"+" target='_blank'><img style = 'width: 100' src=" + dump['imgUrl'] + "> </a>"
-            marker.bindPopup(htmlpic)
+            popupHtml = buildMarkerPopup(dump["size"], dump["type"], dump['imgUrl']);
+
+            marker.bindPopup(popupHtml);
             dumpMarkerArray.push(marker);
 
+            
           }
         });
 
@@ -110,10 +112,38 @@
     }else{
       // Layer was already previously built, just re-add it.
       map.addLayer(dumpMarkersLayerGroup);
-    }
-    
+    }  
+  }
 
-    
+
+  function buildMarkerPopup(dumpSize, dumpTypes, imgUrl){
+    // First build the HTML list of dump types.
+    var dumpTypeListHtml = "";
+
+    if(dumpTypes.length > 1){ 
+      var dumpTypeListHtml = "<ul>";
+      for (index = 0; index < dumpTypes.length; index++) {
+        dumpTypeListHtml = dumpTypeListHtml + "<li>" + capitalizeFirstLetter(dumpTypes[index]);
+      }
+      dumpTypeListHtml = dumpTypeListHtml + "</ul>";
+    }else{
+      dumpTypeListHtml = capitalizeFirstLetter(dumpTypes[0]);
+    }
+
+    // Noe build the popup.    
+    var markerPopupHtml = "<a href ='" + imgUrl + "'" + " target='_blank'>" + 
+      "<img style = 'width: 200' src=" + imgUrl + ">" + 
+    "</a><br><br>" +
+    "<label>Size:</label> " + capitalizeFirstLetter(dumpSize) + "<br>" +
+    "<label>Type:</label> " + dumpTypeListHtml;
+
+    return markerPopupHtml;
+  }
+
+  // All the letters of dump size and type words are capitalized.
+  // We fix that here. e.g. 
+  function capitalizeFirstLetter(str){
+    return str.charAt(0) + str.toLowerCase().substring(1);
   }
 
   function toggleDumpHeatMap(display){
