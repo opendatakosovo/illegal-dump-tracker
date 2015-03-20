@@ -13,7 +13,7 @@
 <script src="{{ url_for('static', filename='map-controls/map-controls.js') }}"></script>
 <script src="{{ url_for('static', filename='waitMe/waitMe.min.js') }}"></script>
 
-<script src="{{ url_for('static', filename='dumps.js') }}"></script>
+<script src="{{ url_for('static', filename='data/dumps.js') }}"></script>
 
 {# All our routes: id, name, polyline colour, display #}
 {%
@@ -54,7 +54,7 @@
   var heatLayerGroup = undefined;
 
   $(document).ready(function(){
-    map = L.map('map', {zoomControl: false}).setView([42.381790, 20.428734], 15);
+    map = L.map('map', {zoomControl: false}).setView([42.37623671900732, 20.424699783325195], 15);
 
     L.tileLayer('http://{s}.tiles.mapbox.com/v3/georges.jjc3k7b1/{z}/{x}/{y}.png', {
         attribution: 'Data Source: <a href="http://opendatakosovo.org">Open Data Kosovo</a>',
@@ -88,7 +88,7 @@
 
         $(dumps).each(function( idx, dump ) {
 
-          daysSinceReported = (new Date().getTime() - dump["trashTime"]["savedTime"]) / (1000*60*60*24);
+          daysSinceReported = getDaysSinceReported(dump);
 
           // Only report trash reported x days from now
           if(daysSinceReported < 100){
@@ -100,9 +100,7 @@
             popupHtml = buildMarkerPopup(dump["size"], dump["type"], dump['imgUrl']);
 
             marker.bindPopup(popupHtml);
-            dumpMarkerArray.push(marker);
-
-            
+            dumpMarkerArray.push(marker);      
           }
         });
 
@@ -113,6 +111,17 @@
       // Layer was already previously built, just re-add it.
       map.addLayer(dumpMarkersLayerGroup);
     }  
+  }
+
+  function getDaysSinceReported(dump){
+    var daysSinceReported = -1
+
+    // For reports not recorded with the TrashOut app, we don't have data on the saved time.
+    if("trashTime" in dump){
+      daysSinceReported = (new Date().getTime() - dump["trashTime"]["savedTime"]) / (1000*60*60*24);
+    }
+
+    return daysSinceReported
   }
 
 
@@ -155,7 +164,7 @@
 
       $(dumps).each(function( idx, dump ) {
 
-        daysSinceReported = (new Date().getTime() - dump["trashTime"]["savedTime"]) / (1000*60*60*24);
+        daysSinceReported = getDaysSinceReported(dump);
 
         // Only report trash reported x days from now
         if(daysSinceReported < 100){
