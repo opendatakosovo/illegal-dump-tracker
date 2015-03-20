@@ -9233,1047 +9233,1047 @@ var dumps = [{
     },
     "type": ["CONSTRUCTION"]
 }, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7623/16679760479_f964d088a6_z.jpg',
-    'location': {
-        'lat': 42.4699443576,
-        'lon': 20.4303216934
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7628/16658587417_fdce3c44ed_z.jpg',
-    'location': {
-        'lat': 42.4698652182,
-        'lon': 20.4302144051
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7642/16865881385_623bf525f1_z.jpg',
-    'location': {
-        'lat': 42.4697860788,
-        'lon': 20.430085659
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8629/16865878675_74039889cf_z.jpg',
-    'location': {
-        'lat': 42.4700868081,
-        'lon': 20.4296565056
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7631/16243576314_cbe72243c6_z.jpg',
-    'location': {
-        'lat': 42.4700868081,
-        'lon': 20.4296135902
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8702/16243502024_985ee415be_z.jpg',
-    'location': {
-        'lat': 42.4699918411,
-        'lon': 20.4294848442
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8695/16840000366_8510562627_z.jpg',
-    'location': {
-        'lat': 42.4699760133,
-        'lon': 20.4293346405
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7646/16865861915_0b63d85648_z.jpg',
-    'location': {
-        'lat': 42.469896874,
-        'lon': 20.4291844368
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC', ' GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8562/16243561364_3381af6b04_z.jpg',
-    'location': {
-        'lat': 42.4694536921,
-        'lon': 20.4293346405
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7648/16839987616_c0d4a693c1_z.jpg',
-    'location': {
-        'lat': 42.469263756,
-        'lon': 20.428712368
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7585/16864686342_9cf72db0a3_z.jpg',
-    'location': {
-        'lat': 42.469501176,
-        'lon': 20.4280686378
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7647/16243478714_6b063f4b42_z.jpg',
-    'location': {
-        'lat': 42.4693587241,
-        'lon': 20.4278111458
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION', 'PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8728/16243474904_11b5c9ae03_z.jpg',
-    'location': {
-        'lat': 42.469295412,
-        'lon': 20.4275751114
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC', 'CONSTRUCTION', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8576/16839973336_a89c3ece38_z.jpg',
-    'location': {
-        'lat': 42.4691213036,
-        'lon': 20.4281115532
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7285/16658537297_0372ec1c10_z.jpg',
-    'location': {
-        'lat': 42.4689313665,
-        'lon': 20.4277467728
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8627/16864668882_5be1b790da_z.jpg',
-    'location': {
-        'lat': 42.4691846158,
-        'lon': 20.4272532463
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8586/16678434300_0fc5b0a6dc_z.jpg',
-    'location': {
-        'lat': 42.4687730851,
-        'lon': 20.4273176193
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7585/16678430040_9fa4490d7a_z.jpg',
-    'location': {
-        'lat': 42.4685040059,
-        'lon': 20.4266738892
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7595/16865818465_2737b8cdb4_z.jpg',
-    'location': {
-        'lat': 42.4688363977,
-        'lon': 20.4262876511
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7627/16865814435_afcb495688_z.jpg',
-    'location': {
-        'lat': 42.4686781161,
-        'lon': 20.4258799553
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7652/16243445084_a38159f736_z.jpg',
-    'location': {
-        'lat': 42.468203269,
-        'lon': 20.426030159
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION', 'PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8617/16678190888_69c01ff710_z.jpg',
-    'location': {
-        'lat': 42.4680608142,
-        'lon': 20.4256224632
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION', 'GLASS', 'PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7288/16864783331_918f626e89_z.jpg',
-    'location': {
-        'lat': 42.4674435061,
-        'lon': 20.4243350029
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['ORGANIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7622/16658504547_144a9266d9_z.jpg',
-    'location': {
-        'lat': 42.4667470487,
-        'lon': 20.424849987
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION', 'PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8729/16245833683_e2dac7a44b_z.jpg',
-    'location': {
-        'lat': 42.4664779608,
-        'lon': 20.4239702225
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7655/16864631742_e8207e521e_z.jpg',
-    'location': {
-        'lat': 42.4652591364,
-        'lon': 20.4234552383
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7592/16243421374_b468854399_z.jpg',
-    'location': {
-        'lat': 42.4657340058,
-        'lon': 20.4223394394
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7584/16243414684_2ffc42a353_z.jpg',
-    'location': {
-        'lat': 42.4654807426,
-        'lon': 20.4219532013
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8606/16245810853_11bf194427_z.jpg',
-    'location': {
-        'lat': 42.4650058712,
-        'lon': 20.420923233
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8673/16243402274_478ede9c54_z.jpg',
-    'location': {
-        'lat': 42.4643727037,
-        'lon': 20.4213094711
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7643/16839896946_88478ee52d_z.jpg',
-    'location': {
-        'lat': 42.464277728,
-        'lon': 20.4200649261
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7624/16678141668_19eba8f5be_z.jpg',
-    'location': {
-        'lat': 42.4639294827,
-        'lon': 20.419678688
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION', 'GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7282/16864735051_750e9c4c03_z.jpg',
-    'location': {
-        'lat': 42.463707871,
-        'lon': 20.4192495346
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8572/16839886916_1bd5c2ede2_z.jpg',
-    'location': {
-        'lat': 42.4629163943,
-        'lon': 20.419421196
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8729/16678355650_c4a9f86071_z.jpg',
-    'location': {
-        'lat': 42.4634545995,
-        'lon': 20.418305397
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7631/16245782083_5e903a72a4_z.jpg',
-    'location': {
-        'lat': 42.4625048224,
-        'lon': 20.4179191589
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7590/16678349220_8edcaf2a25_z.jpg',
-    'location': {
-        'lat': 42.4625998008,
-        'lon': 20.4165458679
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8563/16679610969_94271c6c78_z.jpg',
-    'location': {
-        'lat': 42.4620932479,
-        'lon': 20.4162025452
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8722/16245773683_a17e98543a_z.jpg',
-    'location': {
-        'lat': 42.4614283909,
-        'lon': 20.4165887833
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7631/16865732965_617e3e0b98_z.jpg',
-    'location': {
-        'lat': 42.4609534888,
-        'lon': 20.4162025452
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC', 'AUTOMOTIVE'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7627/16864710151_c3e958cd68_z.jpg',
-    'location': {
-        'lat': 42.4602569592,
-        'lon': 20.4152584076
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8712/16839861036_e5d76901a9_z.jpg',
-    'location': {
-        'lat': 42.4587372312,
-        'lon': 20.4157304764
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8638/16679594779_52ec10864b_z.jpg',
-    'location': {
-        'lat': 42.4583572935,
-        'lon': 20.4157304764
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8722/16678103068_83bba4fcab_z.jpg',
-    'location': {
-        'lat': 42.4579773534,
-        'lon': 20.4160737991
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7607/16678323610_121eccc439_z.jpg',
-    'location': {
-        'lat': 42.4577240588,
-        'lon': 20.4161596298
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7598/16679587419_d52cafac05_z.jpg',
-    'location': {
-        'lat': 42.4574707631,
-        'lon': 20.4166316986
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7628/16865399982_869187cb2c_z.jpg',
-    'location': {
-        'lat': 42.3748417687,
-        'lon': 20.4245066643
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7588/16244195644_5da5345065_z.jpg',
-    'location': {
-        'lat': 42.3747704352,
-        'lon': 20.4242438078
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7282/16865549701_f133f7f541_z.jpg',
-    'location': {
-        'lat': 42.374600027,
-        'lon': 20.4239273071
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8621/16680433849_a673de893c_z.jpg',
-    'location': {
-        'lat': 42.3745049152,
-        'lon': 20.423642993
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8728/16244194714_4bb8977c45_z.jpg',
-    'location': {
-        'lat': 42.3744692483,
-        'lon': 20.4230368137
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7589/16840696086_0d8709165a_z.jpg',
-    'location': {
-        'lat': 42.3745247302,
-        'lon': 20.4221838713
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7643/16244193984_bd1c2c0d19_z.jpg',
-    'location': {
-        'lat': 42.3746119159,
-        'lon': 20.4220873117
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7645/16840694386_ef03890e5b_z.jpg',
-    'location': {
-        'lat': 42.3747228794,
-        'lon': 20.4220014811
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7632/16866561165_212731d508_z.jpg',
-    'location': {
-        'lat': 42.3750161392,
-        'lon': 20.4215884209
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8679/16865545791_bf7bd811e6_z.jpg',
-    'location': {
-        'lat': 42.3753648787,
-        'lon': 20.4213738441
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['ORGANIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7594/16866560225_3da9dbde6e_z.jpg',
-    'location': {
-        'lat': 42.3754203598,
-        'lon': 20.4212236404
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8736/16680430029_d5a2060c83_z.jpg',
-    'location': {
-        'lat': 42.375277694,
-        'lon': 20.4211914539
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7591/16679166110_068771b59d_z.jpg',
-    'location': {
-        'lat': 42.375277694,
-        'lon': 20.4210090637
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8695/16246595423_b76ab89586_z.jpg',
-    'location': {
-        'lat': 42.3758879843,
-        'lon': 20.4208374023
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7284/16244189114_e588d785ec_z.jpg',
-    'location': {
-        'lat': 42.3759355392,
-        'lon': 20.4205048084
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7626/16865393142_4c6dbf10c4_z.jpg',
-    'location': {
-        'lat': 42.3755154702,
-        'lon': 20.4203653336
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8621/16659257887_654c1c6654_z.jpg',
-    'location': {
-        'lat': 42.3758959101,
-        'lon': 20.4193997383
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8721/16246594123_761ea8b708_z.jpg',
-    'location': {
-        'lat': 42.3758721327,
-        'lon': 20.4189491272
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['METAL', ' PLASTIC', ' CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7625/16865391852_2484fefaea_z.jpg',
-    'location': {
-        'lat': 42.3756502096,
-        'lon': 20.4185414314
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC', ' CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7608/16679163090_cf0ec25a81_z.jpg',
-    'location': {
-        'lat': 42.3758959101,
-        'lon': 20.418176651
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7638/16840688186_d9275b24a7_z.jpg',
-    'location': {
-        'lat': 42.3757056904,
-        'lon': 20.4178011417
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC', ' GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7612/16244185894_e16b724406_z.jpg',
-    'location': {
-        'lat': 42.3769183312,
-        'lon': 20.4216957092
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7642/16679161080_3fd164498d_z.jpg',
-    'location': {
-        'lat': 42.3769421082,
-        'lon': 20.4216259718
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8729/16244185064_47548b033d_z.jpg',
-    'location': {
-        'lat': 42.3772076178,
-        'lon': 20.4211860895
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC', ' CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7644/16840686396_ef397dc8d7_z.jpg',
-    'location': {
-        'lat': 42.3774097214,
-        'lon': 20.421384573
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION', ' PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8626/16244589324_70b783c27e_z.jpg',
-    'location': {
-        'lat': 42.37059332,
-        'lon': 20.420333147
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION', ' PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8583/16865800482_5bce1929d5_z.jpg',
-    'location': {
-        'lat': 42.3705299081,
-        'lon': 20.4202580452
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7645/16865941931_92d0935463_z.jpg',
-    'location': {
-        'lat': 42.3706805112,
-        'lon': 20.4203975201
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7287/16679346818_7af5822a7c_z.jpg',
-    'location': {
-        'lat': 42.3708231875,
-        'lon': 20.4202258587
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7617/16246997423_150d7437f8_z.jpg',
-    'location': {
-        'lat': 42.3709896427,
-        'lon': 20.4204618931
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8690/16865799182_37df1c0f11_z.jpg',
-    'location': {
-        'lat': 42.3706963641,
-        'lon': 20.4203653336
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7285/16865940511_c702338f61_z.jpg',
-    'location': {
-        'lat': 42.3709737898,
-        'lon': 20.420730114
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7619/16680827999_7b01900e57_z.jpg',
-    'location': {
-        'lat': 42.3713542573,
-        'lon': 20.420601368
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7640/16865939931_323d662472_z.jpg',
-    'location': {
-        'lat': 42.3712749934,
-        'lon': 20.4205691814
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7623/16865797902_137239c744_z.jpg',
-    'location': {
-        'lat': 42.3711560974,
-        'lon': 20.4203975201
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7629/16246995523_18120af7a5_z.jpg',
-    'location': {
-        'lat': 42.3714414475,
-        'lon': 20.4205799103
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8738/16679563190_5d961ed5c6_z.jpg',
-    'location': {
-        'lat': 42.3712115823,
-        'lon': 20.420268774
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8598/16680826729_f901b9f4d9_z.jpg',
-    'location': {
-        'lat': 42.3715286375,
-        'lon': 20.4199147224
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8592/16841088126_82081f48c8_z.jpg',
-    'location': {
-        'lat': 42.371267067,
-        'lon': 20.4200434685
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7286/16841251496_239b0a5cb2_z.jpg',
-    'location': {
-        'lat': 42.3698006672,
-        'lon': 20.4160737991
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8626/16841251256_86cdcc99fa_z.jpg',
-    'location': {
-        'lat': 42.3697689609,
-        'lon': 20.415623188
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7644/16244747724_105b2d15eb_z.jpg',
-    'location': {
-        'lat': 42.3697689609,
-        'lon': 20.4151296616
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7627/16244747564_776baf6f94_z.jpg',
-    'location': {
-        'lat': 42.3697531077,
-        'lon': 20.4147434235
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8734/16867118705_dc2b051ee4_z.jpg',
-    'location': {
-        'lat': 42.3696738418,
-        'lon': 20.4140996933
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7591/16680987949_a30c63c1a0_z.jpg',
-    'location': {
-        'lat': 42.369610429,
-        'lon': 20.4130482674
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8712/16247156403_2d78faa223_z.jpg',
-    'location': {
-        'lat': 42.3689287375,
-        'lon': 20.4124474525
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7281/16247156163_fafd4372b5_z.jpg',
-    'location': {
-        'lat': 42.3693250707,
-        'lon': 20.411696434
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7287/16680987009_62d8012626_z.jpg',
-    'location': {
-        'lat': 42.3698482266,
-        'lon': 20.4113960266
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8687/16841248576_e5d0a06987_z.jpg',
-    'location': {
-        'lat': 42.36946775,
-        'lon': 20.4105591774
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7632/16679847480_8d14e74674_z.jpg',
-    'location': {
-        'lat': 42.3700543172,
-        'lon': 20.4095506668
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8600/16866079772_7a7e936f2a_z.jpg',
-    'location': {
-        'lat': 42.3704030842,
-        'lon': 20.4092931747
-    }
-}, {
-    'size': 'SMALL',
-    'type': ['PLASTIC ', ' CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8716/16841371666_c651ea7750_z.jpg',
-    'location': {
-        'lat': 42.3709420841,
-        'lon': 20.4099798203
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8719/16247319953_356b57be75_z.jpg',
-    'location': {
-        'lat': 42.3707518494,
-        'lon': 20.4146575928
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8623/16866120282_2e535a29b4_z.jpg',
-    'location': {
-        'lat': 42.3706250259,
-        'lon': 20.4150009155
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7282/16867282445_6731472f58_z.jpg',
-    'location': {
-        'lat': 42.3705616141,
-        'lon': 20.4151511192
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' CONSTRUCTION'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7593/16867282265_4b258b9e32_z.jpg',
-    'location': {
-        'lat': 42.3705299081,
-        'lon': 20.415430069
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8608/16247318863_6eed5a8d1d_z.jpg',
-    'location': {
-        'lat': 42.3704664962,
-        'lon': 20.4157519341
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8625/16867281545_cb730c5669_z.jpg',
-    'location': {
-        'lat': 42.3704030842,
-        'lon': 20.4162025452
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' GLASS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7643/16867281305_b4b793ebaf_z.jpg',
-    'location': {
-        'lat': 42.3704506432,
-        'lon': 20.4164171219
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8706/16866261241_f69b8e161b_z.jpg',
-    'location': {
-        'lat': 42.3703713782,
-        'lon': 20.4165887833
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8707/16866261091_91b88e251f_z.jpg',
-    'location': {
-        'lat': 42.3702128479,
-        'lon': 20.4166960716
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' GLASS ', ' DANGEROUS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7608/16681150549_79df4e1f21_z.jpg',
-    'location': {
-        'lat': 42.3700543172,
-        'lon': 20.4201078415
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' GLASS ', ' DANGEROUS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7608/16681150269_d13c9d3e40_z.jpg',
-    'location': {
-        'lat': 42.3697531077,
-        'lon': 20.4201722145
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' GLASS ', ' DANGEROUS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7612/16244909234_713cca6c91_z.jpg',
-    'location': {
-        'lat': 42.3697372545,
-        'lon': 20.4203867912
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' GLASS ', ' DANGEROUS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7611/16679884580_10e2cf63e5_z.jpg',
-    'location': {
-        'lat': 42.3701177295,
-        'lon': 20.4202151299
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' DANGEROUS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7606/16841409216_be414a17a2_z.jpg',
-    'location': {
-        'lat': 42.3701018764,
-        'lon': 20.4201078415
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' DANGEROUS'],
-    'id': 1,
-    'imgUrl': 'https://farm8.staticflickr.com/7620/16681148359_49e21be28f_z.jpg',
-    'location': {
-        'lat': 42.3704189372,
-        'lon': 20.4207730293
-    }
-}, {
-    'size': 'LARGE',
-    'type': ['PLASTIC ', ' DANGEROUS'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8581/16841408956_dc3eaeea65_z.jpg',
-    'location': {
-        'lat': 42.370260407,
-        'lon': 20.4206442833
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['ORGANIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8736/16679883280_460040fa7d_z.jpg',
-    'location': {
-        'lat': 42.3701177295,
-        'lon': 20.4199147224
-    }
-}, {
-    'size': 'MEDIUM',
-    'type': ['PLASTIC'],
-    'id': 1,
-    'imgUrl': 'https://farm9.staticflickr.com/8561/16679668278_39e8ee7ba9_z.jpg',
-    'location': {
-        'lat': 42.3703238192,
-        'lon': 20.4212880135
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7623/16679760479_f964d088a6_z.jpg",
+    "location": {
+        "lat": 42.4699443576,
+        "lon": 20.4303216934
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7628/16658587417_fdce3c44ed_z.jpg",
+    "location": {
+        "lat": 42.4698652182,
+        "lon": 20.4302144051
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7642/16865881385_623bf525f1_z.jpg",
+    "location": {
+        "lat": 42.4697860788,
+        "lon": 20.430085659
+    }
+}, {
+    "size": "SMALL",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8629/16865878675_74039889cf_z.jpg",
+    "location": {
+        "lat": 42.4700868081,
+        "lon": 20.4296565056
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7631/16243576314_cbe72243c6_z.jpg",
+    "location": {
+        "lat": 42.4700868081,
+        "lon": 20.4296135902
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8702/16243502024_985ee415be_z.jpg",
+    "location": {
+        "lat": 42.4699918411,
+        "lon": 20.4294848442
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8695/16840000366_8510562627_z.jpg",
+    "location": {
+        "lat": 42.4699760133,
+        "lon": 20.4293346405
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7646/16865861915_0b63d85648_z.jpg",
+    "location": {
+        "lat": 42.469896874,
+        "lon": 20.4291844368
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC", " GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8562/16243561364_3381af6b04_z.jpg",
+    "location": {
+        "lat": 42.4694536921,
+        "lon": 20.4293346405
+    }
+}, {
+    "size": "SMALL",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7648/16839987616_c0d4a693c1_z.jpg",
+    "location": {
+        "lat": 42.469263756,
+        "lon": 20.428712368
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7585/16864686342_9cf72db0a3_z.jpg",
+    "location": {
+        "lat": 42.469501176,
+        "lon": 20.4280686378
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7647/16243478714_6b063f4b42_z.jpg",
+    "location": {
+        "lat": 42.4693587241,
+        "lon": 20.4278111458
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION", "PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8728/16243474904_11b5c9ae03_z.jpg",
+    "location": {
+        "lat": 42.469295412,
+        "lon": 20.4275751114
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC", "CONSTRUCTION", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8576/16839973336_a89c3ece38_z.jpg",
+    "location": {
+        "lat": 42.4691213036,
+        "lon": 20.4281115532
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7285/16658537297_0372ec1c10_z.jpg",
+    "location": {
+        "lat": 42.4689313665,
+        "lon": 20.4277467728
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8627/16864668882_5be1b790da_z.jpg",
+    "location": {
+        "lat": 42.4691846158,
+        "lon": 20.4272532463
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8586/16678434300_0fc5b0a6dc_z.jpg",
+    "location": {
+        "lat": 42.4687730851,
+        "lon": 20.4273176193
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7585/16678430040_9fa4490d7a_z.jpg",
+    "location": {
+        "lat": 42.4685040059,
+        "lon": 20.4266738892
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7595/16865818465_2737b8cdb4_z.jpg",
+    "location": {
+        "lat": 42.4688363977,
+        "lon": 20.4262876511
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7627/16865814435_afcb495688_z.jpg",
+    "location": {
+        "lat": 42.4686781161,
+        "lon": 20.4258799553
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7652/16243445084_a38159f736_z.jpg",
+    "location": {
+        "lat": 42.468203269,
+        "lon": 20.426030159
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION", "PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8617/16678190888_69c01ff710_z.jpg",
+    "location": {
+        "lat": 42.4680608142,
+        "lon": 20.4256224632
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION", "GLASS", "PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7288/16864783331_918f626e89_z.jpg",
+    "location": {
+        "lat": 42.4674435061,
+        "lon": 20.4243350029
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["ORGANIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7622/16658504547_144a9266d9_z.jpg",
+    "location": {
+        "lat": 42.4667470487,
+        "lon": 20.424849987
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION", "PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8729/16245833683_e2dac7a44b_z.jpg",
+    "location": {
+        "lat": 42.4664779608,
+        "lon": 20.4239702225
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7655/16864631742_e8207e521e_z.jpg",
+    "location": {
+        "lat": 42.4652591364,
+        "lon": 20.4234552383
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7592/16243421374_b468854399_z.jpg",
+    "location": {
+        "lat": 42.4657340058,
+        "lon": 20.4223394394
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7584/16243414684_2ffc42a353_z.jpg",
+    "location": {
+        "lat": 42.4654807426,
+        "lon": 20.4219532013
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8606/16245810853_11bf194427_z.jpg",
+    "location": {
+        "lat": 42.4650058712,
+        "lon": 20.420923233
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8673/16243402274_478ede9c54_z.jpg",
+    "location": {
+        "lat": 42.4643727037,
+        "lon": 20.4213094711
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7643/16839896946_88478ee52d_z.jpg",
+    "location": {
+        "lat": 42.464277728,
+        "lon": 20.4200649261
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7624/16678141668_19eba8f5be_z.jpg",
+    "location": {
+        "lat": 42.4639294827,
+        "lon": 20.419678688
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION", "GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7282/16864735051_750e9c4c03_z.jpg",
+    "location": {
+        "lat": 42.463707871,
+        "lon": 20.4192495346
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8572/16839886916_1bd5c2ede2_z.jpg",
+    "location": {
+        "lat": 42.4629163943,
+        "lon": 20.419421196
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8729/16678355650_c4a9f86071_z.jpg",
+    "location": {
+        "lat": 42.4634545995,
+        "lon": 20.418305397
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7631/16245782083_5e903a72a4_z.jpg",
+    "location": {
+        "lat": 42.4625048224,
+        "lon": 20.4179191589
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7590/16678349220_8edcaf2a25_z.jpg",
+    "location": {
+        "lat": 42.4625998008,
+        "lon": 20.4165458679
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8563/16679610969_94271c6c78_z.jpg",
+    "location": {
+        "lat": 42.4620932479,
+        "lon": 20.4162025452
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8722/16245773683_a17e98543a_z.jpg",
+    "location": {
+        "lat": 42.4614283909,
+        "lon": 20.4165887833
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7631/16865732965_617e3e0b98_z.jpg",
+    "location": {
+        "lat": 42.4609534888,
+        "lon": 20.4162025452
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC", "AUTOMOTIVE"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7627/16864710151_c3e958cd68_z.jpg",
+    "location": {
+        "lat": 42.4602569592,
+        "lon": 20.4152584076
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8712/16839861036_e5d76901a9_z.jpg",
+    "location": {
+        "lat": 42.4587372312,
+        "lon": 20.4157304764
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8638/16679594779_52ec10864b_z.jpg",
+    "location": {
+        "lat": 42.4583572935,
+        "lon": 20.4157304764
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8722/16678103068_83bba4fcab_z.jpg",
+    "location": {
+        "lat": 42.4579773534,
+        "lon": 20.4160737991
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7607/16678323610_121eccc439_z.jpg",
+    "location": {
+        "lat": 42.4577240588,
+        "lon": 20.4161596298
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7598/16679587419_d52cafac05_z.jpg",
+    "location": {
+        "lat": 42.4574707631,
+        "lon": 20.4166316986
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7628/16865399982_869187cb2c_z.jpg",
+    "location": {
+        "lat": 42.3748417687,
+        "lon": 20.4245066643
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7588/16244195644_5da5345065_z.jpg",
+    "location": {
+        "lat": 42.3747704352,
+        "lon": 20.4242438078
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7282/16865549701_f133f7f541_z.jpg",
+    "location": {
+        "lat": 42.374600027,
+        "lon": 20.4239273071
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8621/16680433849_a673de893c_z.jpg",
+    "location": {
+        "lat": 42.3745049152,
+        "lon": 20.423642993
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8728/16244194714_4bb8977c45_z.jpg",
+    "location": {
+        "lat": 42.3744692483,
+        "lon": 20.4230368137
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7589/16840696086_0d8709165a_z.jpg",
+    "location": {
+        "lat": 42.3745247302,
+        "lon": 20.4221838713
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7643/16244193984_bd1c2c0d19_z.jpg",
+    "location": {
+        "lat": 42.3746119159,
+        "lon": 20.4220873117
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7645/16840694386_ef03890e5b_z.jpg",
+    "location": {
+        "lat": 42.3747228794,
+        "lon": 20.4220014811
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7632/16866561165_212731d508_z.jpg",
+    "location": {
+        "lat": 42.3750161392,
+        "lon": 20.4215884209
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8679/16865545791_bf7bd811e6_z.jpg",
+    "location": {
+        "lat": 42.3753648787,
+        "lon": 20.4213738441
+    }
+}, {
+    "size": "SMALL",
+    "type": ["ORGANIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7594/16866560225_3da9dbde6e_z.jpg",
+    "location": {
+        "lat": 42.3754203598,
+        "lon": 20.4212236404
+    }
+}, {
+    "size": "SMALL",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8736/16680430029_d5a2060c83_z.jpg",
+    "location": {
+        "lat": 42.375277694,
+        "lon": 20.4211914539
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7591/16679166110_068771b59d_z.jpg",
+    "location": {
+        "lat": 42.375277694,
+        "lon": 20.4210090637
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8695/16246595423_b76ab89586_z.jpg",
+    "location": {
+        "lat": 42.3758879843,
+        "lon": 20.4208374023
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7284/16244189114_e588d785ec_z.jpg",
+    "location": {
+        "lat": 42.3759355392,
+        "lon": 20.4205048084
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7626/16865393142_4c6dbf10c4_z.jpg",
+    "location": {
+        "lat": 42.3755154702,
+        "lon": 20.4203653336
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8621/16659257887_654c1c6654_z.jpg",
+    "location": {
+        "lat": 42.3758959101,
+        "lon": 20.4193997383
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8721/16246594123_761ea8b708_z.jpg",
+    "location": {
+        "lat": 42.3758721327,
+        "lon": 20.4189491272
+    }
+}, {
+    "size": "LARGE",
+    "type": ["METAL", " PLASTIC", " CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7625/16865391852_2484fefaea_z.jpg",
+    "location": {
+        "lat": 42.3756502096,
+        "lon": 20.4185414314
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC", " CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7608/16679163090_cf0ec25a81_z.jpg",
+    "location": {
+        "lat": 42.3758959101,
+        "lon": 20.418176651
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7638/16840688186_d9275b24a7_z.jpg",
+    "location": {
+        "lat": 42.3757056904,
+        "lon": 20.4178011417
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC", " GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7612/16244185894_e16b724406_z.jpg",
+    "location": {
+        "lat": 42.3769183312,
+        "lon": 20.4216957092
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7642/16679161080_3fd164498d_z.jpg",
+    "location": {
+        "lat": 42.3769421082,
+        "lon": 20.4216259718
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8729/16244185064_47548b033d_z.jpg",
+    "location": {
+        "lat": 42.3772076178,
+        "lon": 20.4211860895
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC", " CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7644/16840686396_ef397dc8d7_z.jpg",
+    "location": {
+        "lat": 42.3774097214,
+        "lon": 20.421384573
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION", " PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8626/16244589324_70b783c27e_z.jpg",
+    "location": {
+        "lat": 42.37059332,
+        "lon": 20.420333147
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION", " PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8583/16865800482_5bce1929d5_z.jpg",
+    "location": {
+        "lat": 42.3705299081,
+        "lon": 20.4202580452
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7645/16865941931_92d0935463_z.jpg",
+    "location": {
+        "lat": 42.3706805112,
+        "lon": 20.4203975201
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7287/16679346818_7af5822a7c_z.jpg",
+    "location": {
+        "lat": 42.3708231875,
+        "lon": 20.4202258587
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7617/16246997423_150d7437f8_z.jpg",
+    "location": {
+        "lat": 42.3709896427,
+        "lon": 20.4204618931
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8690/16865799182_37df1c0f11_z.jpg",
+    "location": {
+        "lat": 42.3706963641,
+        "lon": 20.4203653336
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7285/16865940511_c702338f61_z.jpg",
+    "location": {
+        "lat": 42.3709737898,
+        "lon": 20.420730114
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7619/16680827999_7b01900e57_z.jpg",
+    "location": {
+        "lat": 42.3713542573,
+        "lon": 20.420601368
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7640/16865939931_323d662472_z.jpg",
+    "location": {
+        "lat": 42.3712749934,
+        "lon": 20.4205691814
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7623/16865797902_137239c744_z.jpg",
+    "location": {
+        "lat": 42.3711560974,
+        "lon": 20.4203975201
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7629/16246995523_18120af7a5_z.jpg",
+    "location": {
+        "lat": 42.3714414475,
+        "lon": 20.4205799103
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8738/16679563190_5d961ed5c6_z.jpg",
+    "location": {
+        "lat": 42.3712115823,
+        "lon": 20.420268774
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8598/16680826729_f901b9f4d9_z.jpg",
+    "location": {
+        "lat": 42.3715286375,
+        "lon": 20.4199147224
+    }
+}, {
+    "size": "LARGE",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8592/16841088126_82081f48c8_z.jpg",
+    "location": {
+        "lat": 42.371267067,
+        "lon": 20.4200434685
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7286/16841251496_239b0a5cb2_z.jpg",
+    "location": {
+        "lat": 42.3698006672,
+        "lon": 20.4160737991
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8626/16841251256_86cdcc99fa_z.jpg",
+    "location": {
+        "lat": 42.3697689609,
+        "lon": 20.415623188
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7644/16244747724_105b2d15eb_z.jpg",
+    "location": {
+        "lat": 42.3697689609,
+        "lon": 20.4151296616
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7627/16244747564_776baf6f94_z.jpg",
+    "location": {
+        "lat": 42.3697531077,
+        "lon": 20.4147434235
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8734/16867118705_dc2b051ee4_z.jpg",
+    "location": {
+        "lat": 42.3696738418,
+        "lon": 20.4140996933
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7591/16680987949_a30c63c1a0_z.jpg",
+    "location": {
+        "lat": 42.369610429,
+        "lon": 20.4130482674
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8712/16247156403_2d78faa223_z.jpg",
+    "location": {
+        "lat": 42.3689287375,
+        "lon": 20.4124474525
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7281/16247156163_fafd4372b5_z.jpg",
+    "location": {
+        "lat": 42.3693250707,
+        "lon": 20.411696434
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7287/16680987009_62d8012626_z.jpg",
+    "location": {
+        "lat": 42.3698482266,
+        "lon": 20.4113960266
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8687/16841248576_e5d0a06987_z.jpg",
+    "location": {
+        "lat": 42.36946775,
+        "lon": 20.4105591774
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7632/16679847480_8d14e74674_z.jpg",
+    "location": {
+        "lat": 42.3700543172,
+        "lon": 20.4095506668
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8600/16866079772_7a7e936f2a_z.jpg",
+    "location": {
+        "lat": 42.3704030842,
+        "lon": 20.4092931747
+    }
+}, {
+    "size": "SMALL",
+    "type": ["PLASTIC ", " CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8716/16841371666_c651ea7750_z.jpg",
+    "location": {
+        "lat": 42.3709420841,
+        "lon": 20.4099798203
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8719/16247319953_356b57be75_z.jpg",
+    "location": {
+        "lat": 42.3707518494,
+        "lon": 20.4146575928
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8623/16866120282_2e535a29b4_z.jpg",
+    "location": {
+        "lat": 42.3706250259,
+        "lon": 20.4150009155
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7282/16867282445_6731472f58_z.jpg",
+    "location": {
+        "lat": 42.3705616141,
+        "lon": 20.4151511192
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " CONSTRUCTION"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7593/16867282265_4b258b9e32_z.jpg",
+    "location": {
+        "lat": 42.3705299081,
+        "lon": 20.415430069
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8608/16247318863_6eed5a8d1d_z.jpg",
+    "location": {
+        "lat": 42.3704664962,
+        "lon": 20.4157519341
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8625/16867281545_cb730c5669_z.jpg",
+    "location": {
+        "lat": 42.3704030842,
+        "lon": 20.4162025452
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " GLASS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7643/16867281305_b4b793ebaf_z.jpg",
+    "location": {
+        "lat": 42.3704506432,
+        "lon": 20.4164171219
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8706/16866261241_f69b8e161b_z.jpg",
+    "location": {
+        "lat": 42.3703713782,
+        "lon": 20.4165887833
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8707/16866261091_91b88e251f_z.jpg",
+    "location": {
+        "lat": 42.3702128479,
+        "lon": 20.4166960716
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " GLASS ", " DANGEROUS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7608/16681150549_79df4e1f21_z.jpg",
+    "location": {
+        "lat": 42.3700543172,
+        "lon": 20.4201078415
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " GLASS ", " DANGEROUS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7608/16681150269_d13c9d3e40_z.jpg",
+    "location": {
+        "lat": 42.3697531077,
+        "lon": 20.4201722145
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " GLASS ", " DANGEROUS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7612/16244909234_713cca6c91_z.jpg",
+    "location": {
+        "lat": 42.3697372545,
+        "lon": 20.4203867912
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " GLASS ", " DANGEROUS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7611/16679884580_10e2cf63e5_z.jpg",
+    "location": {
+        "lat": 42.3701177295,
+        "lon": 20.4202151299
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " DANGEROUS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7606/16841409216_be414a17a2_z.jpg",
+    "location": {
+        "lat": 42.3701018764,
+        "lon": 20.4201078415
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " DANGEROUS"],
+    "id": 1,
+    "imgUrl": "https://farm8.staticflickr.com/7620/16681148359_49e21be28f_z.jpg",
+    "location": {
+        "lat": 42.3704189372,
+        "lon": 20.4207730293
+    }
+}, {
+    "size": "LARGE",
+    "type": ["PLASTIC ", " DANGEROUS"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8581/16841408956_dc3eaeea65_z.jpg",
+    "location": {
+        "lat": 42.370260407,
+        "lon": 20.4206442833
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["ORGANIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8736/16679883280_460040fa7d_z.jpg",
+    "location": {
+        "lat": 42.3701177295,
+        "lon": 20.4199147224
+    }
+}, {
+    "size": "MEDIUM",
+    "type": ["PLASTIC"],
+    "id": 1,
+    "imgUrl": "https://farm9.staticflickr.com/8561/16679668278_39e8ee7ba9_z.jpg",
+    "location": {
+        "lat": 42.3703238192,
+        "lon": 20.4212880135
     }
 }]
