@@ -26,10 +26,17 @@ def about():
     '''
     return render_template('mod_map/about.html')
 
-
 @mod_map.route('/testimonials', methods=['GET'])
 def testimonials():
     '''
     Show testimonials page.
     '''
     return render_template('mod_map/testimonials.html')
+
+@mod_map.route('/video', methods=['GET'])
+def video():
+    '''
+    Show video page.
+    '''
+    return render_template('mod_map/video.html')
+
