@@ -36,6 +36,7 @@
 
 <script>
   var map = undefined;
+  var COVERED_DAYS = 800;
 
   var routeLayerGroups = {
     {% for route in routes %}
@@ -91,7 +92,7 @@
           daysSinceReported = getDaysSinceReported(dump);
 
           // Only report trash reported x days from now
-          if(daysSinceReported < 300){
+          if(daysSinceReported < COVERED_DAYS){
 
             lat = dump["location"]["lat"];
             lng = dump["location"]["lon"];
@@ -167,7 +168,7 @@
         daysSinceReported = getDaysSinceReported(dump);
 
         // Only report trash reported x days from now
-        if(daysSinceReported < 300){
+        if(daysSinceReported < COVERED_DAYS){
           lat = dump["location"]["lat"];
           lng = dump["location"]["lon"];
 
